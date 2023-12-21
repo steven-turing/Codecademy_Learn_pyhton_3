@@ -19,3 +19,11 @@ statement_two = "Yes"
 statement_three ="No"
 #Statement four:Cats are female dogs.
 statement_four ="Yes"
+
+#3.Relational Operators: Equals and Not Equals
+#Statement one:(5 * 2) - 1 == 8 + 1
+statement_one = True
+#Statement two:13 - 6 != (3 * 2) + 1
+statement_two = False
+#Statement three:3 * (2 - 1) == 4 - 1
+statement_three = True
