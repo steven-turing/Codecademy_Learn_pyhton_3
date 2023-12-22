@@ -27,3 +27,14 @@ statement_one = True
 statement_two = False
 #Statement three:3 * (2 - 1) == 4 - 1
 statement_three = True
+
+#4.Boolean Variables
+#True and False are the only bool types, and any variable that is assigned one of these values is called a boolean
+# variable.
+my_baby_bool = "true"
+
+print(type(my_baby_bool))
+
+my_baby_bool_two = True
+
+print(type(my_baby_bool_two))
