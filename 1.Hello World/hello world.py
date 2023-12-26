@@ -17,11 +17,9 @@ print("Hello and Welcome " + my_name + "!")
 
 # my first program :  spider chinamoney website
 
-# 3.Print
-# Now what we’re going to do is teach our computer to communicate.
-# The gift of speech is valuable: a computer can answer many questions we have about “how” or “why” or “what” it is doing.
-# In Python, the print() function is used to tell a computer to talk.
-# The message to be printed should be surrounded by quotes:
+# 3.Print Now what we’re going to do is teach our computer to communicate. The gift of speech is valuable: a computer
+# can answer many questions we have about “how” or “why” or “what” it is doing. In Python, the print() function is
+# used to tell a computer to talk. The message to be printed should be surrounded by quotes:
 
 print("Hello world!")
 
