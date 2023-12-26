@@ -1,4 +1,4 @@
-#ASCII art is a graphic design technique that uses computers for presentation and consists of pictures pieced together
+# ASCII art is a graphic design technique that uses computers for presentation and consists of pictures pieced together
 # from individual characters.
 print(" SSS  L    ")
 print("S   S L    ")
@@ -8,11 +8,11 @@ print("    S L    ")
 print("S   S L    ")
 print(" SSS  LLLLL")
 
-#My first name and last name
+# My first name and last name
 print("my first name is jinwen")
 print("my last name is si")
 
-#A fun fact about yourself
+# A fun fact about yourself
 print("sing out of tune")
 
 print(" SSS   III ")
