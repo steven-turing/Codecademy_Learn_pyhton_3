@@ -173,4 +173,3 @@ print(sorted)
 
 inventory.sort()
 print(inventory)
-
