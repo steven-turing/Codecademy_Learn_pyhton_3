@@ -30,3 +30,4 @@ print(pizza_and_prices)
 
 three_cheapest = pizza_and_prices[:3]
 print(three_cheapest)
+
