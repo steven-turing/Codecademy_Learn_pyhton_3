@@ -31,3 +31,16 @@ print(pizza_and_prices)
 three_cheapest = pizza_and_prices[:3]
 print(three_cheapest)
 
+# The zip() function takes two (or more) lists as inputs and returns an object that contains a list of pairs.
+# Each pair contains one element from each of the inputs.
+
+# This zip object contains the location of this variable in our computer’s memory. Don’t worry though,
+# it is fairly simple to convert this object into a useable list by using the built-in function list():
+owners = ["Jenny", "Alexus", "Sam", "Grace"]
+dogs_names = ["Elphonse", "Dr. Doggy DDS", "Carter", "Ralph"]
+
+names_and_dogs_names = zip(owners, dogs_names)
+
+list_of_names_and_dogs_names = list(names_and_dogs_names)
+
+print(list_of_names_and_dogs_names)
