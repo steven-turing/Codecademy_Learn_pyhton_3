@@ -28,3 +28,7 @@ for game in sport_games:
   print(game)
 
 # 4.For Loops: Using Range
+promise = "I will finish the python loops module!"
+
+for temp in range(5):
+  print(promise)
