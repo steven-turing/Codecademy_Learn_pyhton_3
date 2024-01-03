@@ -99,3 +99,35 @@ for location in sales_data:
         scoops_sold += data
 
 print(scoops_sold)
+
+# 11.List Comprehensions: Introduction
+# new_list = [<expression> for <element> in <collection>]
+grades = [90, 88, 62, 76, 74, 89, 48, 57]
+
+scaled_grades = [grade + 10 for grade in grades]
+
+print(scaled_grades)
+
+# 12.List Comprehensions: Conditionals
+# numbers = [2, -1, 79, 33, -45]
+# no_if   = [num * 2 for num in numbers]
+# if_only = [num * 2 for num in numbers if num < 0]
+# if_else = [num * 2 if num < 0 else num * 3 for num in numbers]
+
+heights = [161, 164, 156, 144, 158, 170, 163, 163, 157]
+
+can_ride_coaster = [ height for height in heights if height > 161]
+print(can_ride_coaster)
+
+# 13.Review
+single_digits = list(range(10))
+print(single_digits)
+
+squares = []
+for single_digit in single_digits:
+  squares.append(single_digit**2)
+
+print(squares)
+
+cubes = [single_digit**3 for single_digit in single_digits]
+print(cubes)
