@@ -64,15 +64,39 @@ def calculate_expenses(plane_ticket_price, car_rental_rate, hotel_rate, trip_tim
 
 calculate_expenses(200, 100, 100, 5)
 
+
 # 8.Types of Arguments
-def trip_planner(first_destination,second_destination,final_destination = "Codecademy HQ"):
-  print("Here is what your trip will look like!")
-  print(f"First, we will stop in {first_destination}, then {second_destination}, and lastly {final_destination}")
+def trip_planner(first_destination, second_destination, final_destination="Codecademy HQ"):
+    print("Here is what your trip will look like!")
+    print(f"First, we will stop in {first_destination}, then {second_destination}, and lastly {final_destination}")
+
 
 trip_planner("France", "Germany", "Denmark")
 
 trip_planner("Denmark", "France", "Germany")
 
-trip_planner(first_destination = "Iceland", final_destination = "Germany", second_destination = "India")
+trip_planner(first_destination="Iceland", final_destination="Germany", second_destination="India")
 
-trip_planner("Brooklyn",  "Queens")
+trip_planner("Brooklyn", "Queens")
+
+# 9.Built-in Functions vs User Defined Functions
+
+help("string")
+
+tshirt_price = 9.75
+shorts_price = 15.50
+mug_price = 5.99
+poster_price = 2.00
+
+# Write your code below:
+def max_price():
+  max_price = max(9.75,15.50,5.99,2.00)
+  print(max_price)
+
+max_price()
+
+min_price = min(9.75,15.50,5.99,2.00)
+print(min_price)
+
+rounded_price = round(tshirt_price,1)
+print(rounded_price)
