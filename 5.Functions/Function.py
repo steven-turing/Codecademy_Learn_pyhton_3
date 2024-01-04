@@ -88,15 +88,98 @@ shorts_price = 15.50
 mug_price = 5.99
 poster_price = 2.00
 
+
 # Write your code below:
 def max_price():
-  max_price = max(9.75,15.50,5.99,2.00)
-  print(max_price)
+    max_price = max(9.75, 15.50, 5.99, 2.00)
+    print(max_price)
+
 
 max_price()
 
-min_price = min(9.75,15.50,5.99,2.00)
+min_price = min(9.75, 15.50, 5.99, 2.00)
 print(min_price)
 
-rounded_price = round(tshirt_price,1)
+rounded_price = round(tshirt_price, 1)
 print(rounded_price)
+
+
+# 10.Variable Access
+# This function will print a hardcoded count of how many locations we have.
+def print_count_locations():
+    favorite_locations = "Paris, Norway, Iceland"
+    print("There are 3 locations")
+
+
+# This function will print the favorite locations
+def show_favorite_locations(favorite_locations):
+    print("Your favorite locations are: " + favorite_locations)
+
+
+print_count_locations()
+show_favorite_locations("Paris, Norway, Iceland")
+
+# 11.Returns
+# Functions can also return a value to the program so that this value can be modified or used later.
+# We use the Python keyword return to do this.
+current_budget = 3500.75
+
+
+def print_remaining_budget(budget):
+    print("Your remaining budget is: $" + str(budget))
+
+
+print_remaining_budget(current_budget)
+
+# Write your code below:
+shirt_expense = 9
+
+
+def deduct_expense(budget, expense):
+    return budget - expense
+
+
+new_budget_after_shirt = deduct_expense(current_budget, shirt_expense)
+
+print_remaining_budget(new_budget_after_shirt)
+
+
+# 12.Multiple Returns
+def top_tourist_locations_italy():
+    first = "Rome"
+    second = "Venice"
+    third = "Florence"
+    return first, second, third
+
+
+most_popular1, most_popular2, most_popular3 = top_tourist_locations_italy()
+
+print(most_popular1)
+print(most_popular2)
+print(most_popular3)
+
+
+# 13.Review
+def trip_planner_welcome(name):
+    print(f"Welcome to tripplanner v1.0 {name} ")
+
+
+trip_planner_welcome("Steven")
+
+
+def estimated_time_rounded(estimated_time):
+    rounded_time = round(estimated_time)
+    return rounded_time
+
+
+estimate = estimated_time_rounded(50.55)
+
+
+def destination_setup(origin, destination, estimated_time, mode_of_transport="Car"):
+    print(f"Your trip starts off in {origin} ")
+    print(f"And you are traveling to {destination} ")
+    print(f"You will be traveling by {mode_of_transport}")
+    print(f"It will take approximately {estimated_time} hours")
+
+
+destination_setup("China", "London", estimate)
