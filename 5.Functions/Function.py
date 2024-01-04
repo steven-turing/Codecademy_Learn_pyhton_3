@@ -49,3 +49,15 @@ def generate_trip_instructions(location):
 generate_trip_instructions("Central Park")
 
 generate_trip_instructions("Grand Central Station")
+
+# 7.Multiple Parameters
+# We can write a function that takes in more than one parameter by using commas:
+
+def calculate_expenses(plane_ticket_price, car_rental_rate, hotel_rate, trip_time):
+  car_rental_total = car_rental_rate * trip_time
+  hotel_total = hotel_rate * trip_time - 10
+  trip_total = car_rental_total + hotel_total + plane_ticket_price
+  print(f"trip_total is {trip_total}")
+  return trip_total
+
+calculate_expenses(200,100,100,5)
