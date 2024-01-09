@@ -65,11 +65,6 @@ def larger_list(my_list1, my_list2):
 # The function should return True if item appears in the list more than n times. The function should return False
 # otherwise.
 
-# Coding question 5 ：Create a function named more_than_n that has three parameters named my_list, item, and n.
-#
-# The function should return True if item appears in the list more than n times. The function should return False
-# otherwise.
-
 # In order to easily count the number of occurrences of item in my_list we can use the count() function.
 def more_than_n(my_list, item, n):
     if my_list.count(item) > n:
@@ -79,3 +74,16 @@ def more_than_n(my_list, item, n):
 
 
 print(more_than_n([2, 4, 6, 2, 3, 2, 1, 2], 2, 3))
+
+
+# Coding question 5 ：Write a function named combine_sort that has two parameters named my_list1 and my_list2.
+#
+# The function should combine these two lists into one new list and sort the result. Return the new sorted list.
+#Write your function here
+def combine_sort(my_list1, my_list2):
+  new_list = my_list1 + my_list2
+  sorted_new_list=sorted(new_list)
+  return sorted_new_list
+
+#Uncomment the line below when your function is done
+print(combine_sort([4, 10, 2, 5], [-10, 2, 5, 10]))
