@@ -74,11 +74,13 @@ runtime = 10000
 
 # A floating-point number, or a float, is a decimal number.
 # Define the rating_out_of_10 float variable below:
+
 rating_out_of_10 = 8.8
 
 # 8.Calculations
 # Computers absolutely excel at performing calculations.
 # Python performs the arithmetic operations of addition, subtraction, multiplication, and division with +, -, *, and /.
+
 print(25 * 68 + 13 / 28)
 
 # 9.Changing Numbers
