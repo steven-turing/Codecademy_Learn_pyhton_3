@@ -21,6 +21,7 @@ statement_four = "Yes"
 
 # 3.Relational Operators: Equals and Not Equals
 # Statement one:(5 * 2) - 1 == 8 + 1
+
 statement_one = True
 # Statement two:13 - 6 != (3 * 2) + 1
 statement_two = False
@@ -39,7 +40,7 @@ my_baby_bool_two = True
 print(type(my_baby_bool_two))
 
 # 5.If Statement You’ll notice that instead of “then” we have a colon, :. That tells the computer that what’s coming
-# next is what should be executed if the condition is met. Enter a user name here, make sure to make it a string
+# next is what should be executed if the condition is met. Enter a user name here, make sure to make it a string.
 user_name = "Dave"
 
 if user_name == "Dave":
