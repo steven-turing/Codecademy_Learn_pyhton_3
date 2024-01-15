@@ -1,8 +1,9 @@
-# 1.
+# 1.What are Loops?
 # LoopsIn programming, this process of using an initialization, repetitions, and an ending condition is called a loop.
 # In a loop, we perform a process of iteration (repeating tasks).
 
-# 2.If we only use print(), our program might look like this:
+# 2.Why Loops?
+# If we only use print(), our program might look like this:
 # Write 10 print() statements below!
 print("This can be so much easier with loops!")
 print("This can be so much easier with loops!")
