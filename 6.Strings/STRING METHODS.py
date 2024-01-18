@@ -11,3 +11,20 @@
 #   .lower() returns the string with all lowercase characters.
 #   .upper() returns the string with all uppercase characters.
 #   .title() returns the string in title case, which means the first letter of each word is capitalized.
+
+poem_title = "spring storm"
+poem_author = "William Carlos Williams"
+
+# Make poem_title have title case and save it to poem_title_fixed.
+poem_title_fixed = poem_title.title()
+
+# Print poem_title and poem_title_fixed.How did the string change?
+print(poem_title)
+print(poem_title_fixed)
+
+# Make poem_author uppercase and save it to poem_author_fixed.
+poem_author_fixed = poem_author.upper()
+
+# Print poem_author and poem_author_fixed. Again, how did the string change?
+print(poem_author)
+print(poem_author_fixed)
