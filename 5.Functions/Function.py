@@ -73,6 +73,13 @@ calculate_expenses(200, 100, 100, 5)
 
 
 # 8.Types of Arguments
+# In Python, there are 3 different types of arguments we can give a function.
+#
+# Positional arguments: arguments that can be called by their position in the function definition.
+#
+# Keyword arguments: arguments that can be called by their name.
+#
+# Default arguments: arguments that are given default values.
 def trip_planner(first_destination, second_destination, final_destination="Codecademy HQ"):
     print("Here is what your trip will look like!")
     print(f"First, we will stop in {first_destination}, then {second_destination}, and lastly {final_destination}")
@@ -107,7 +114,7 @@ print(length_of_destination)
 
 # There are even more obscure ones like help() where Python will print a link to documentation for us and provide some
 # details:
-#help("string")
+help("string")
 # Would output (shortened for readability):
 
 # Let’s practice using a few of them. You will need to rely on the provided Python documentation links to find your
