@@ -28,3 +28,65 @@ poem_author_fixed = poem_author.upper()
 # Print poem_author and poem_author_fixed. Again, how did the string change?
 print(poem_author)
 print(poem_author_fixed)
+
+# 3.Splitting Strings
+# .split() is performed on a string, takes one argument, and returns a list of substrings found between the given
+# argument (which in the case of .split() is known as the delimiter). The following syntax should
+# be used:string_name.split(delimiter)
+
+# If you do not provide an argument for .split() it will default to splitting at spaces.
+# .split() returned a list with each word in the string.
+man_its_a_hot_one = "Like seven inches from the midday sun"
+print(man_its_a_hot_one.split())
+
+# Use .split() to create a list called line_one_words that contains each word in this line of poetry.
+line_one = "The sky has given over"
+line_one_words = line_one.split()
+
+# 4.Splitting Strings II
+# If we provide an argument for .split() we can dictate the character we want our string to be split on. This argument
+# should be provided as a string itself.
+
+# We provided 'n' as the argument for .split() so our string “santana” got split at each 'n' character into a list of
+# three strings.
+greatest_guitarist = "santana"
+print(greatest_guitarist.split('n'))
+# => ['sa', 'ta', 'a']
+
+print(greatest_guitarist.split('a'))
+# => ['s', 'nt', 'n', '']
+
+# Using .split() and the provided string, create a list called author_names containing each individual author name as
+# it’s own string.
+authors = "Audre Lorde,Gabriela Mistral,Jean Toomer,An Qi,Walt Whitman,Shel Silverstein,Carmen Boullosa,Kamala" \
+          " Suraiyya,Langston Hughes,Adrienne Rich,Nikki Giovanni"
+
+author_names = authors.split(",")
+print(author_names)
+
+# Create another list called author_last_names that only contains the last names of the poets in the provided string.
+author_last_names = []
+for author_name in author_names:
+  splited_author_name=author_name.split()
+  author_last_names.append(splited_author_name[1])
+
+print(author_last_names)
+
+# 5.Splitting Strings III
+# We can also split strings using escape sequences. Escape sequences are used to indicate that we want to split by
+# something in a string that is not necessarily a character. The two escape sequences we will cover here are
+#
+# \n Newline
+# \t Horizontal Tab
+
+# Newline or \n will allow us to split a multi-line string by line breaks and \t will allow us to split a string by tabs.
+
+
+# 6.Joining Strings I
+
+# 7.Joining Strings II
+winter_trees_lines = ['All the complicated details', 'of the attiring and', 'the disattiring are completed!', 'A liquid moon', 'moves gently among', 'the long branches.', 'Thus having prepared their buds', 'against a sure winter', 'the wise trees', 'stand sleeping in the cold.']
+
+winter_trees_full = '\n'.join(winter_trees_lines)
+
+# 8.strip()
