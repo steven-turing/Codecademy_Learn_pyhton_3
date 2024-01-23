@@ -90,3 +90,10 @@ winter_trees_lines = ['All the complicated details', 'of the attiring and', 'the
 winter_trees_full = '\n'.join(winter_trees_lines)
 
 # 8.strip()
+
+
+#11.format()
+def poem_title_card(title,poet):
+  return 'The poem "{}" is written by {}.'.format(title,poet)
+
+poem_title_card("I Hear America Singing", "Walt Whitman")
