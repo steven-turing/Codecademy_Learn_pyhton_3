@@ -235,3 +235,95 @@ def poem_title_card(title, poet):
 
 
 poem_title_card("I Hear America Singing", "Walt Whitman")
+
+
+# 12.format() II
+# .format() can be made even more legible for other people reading your code by including keywords.
+# Previously, with .format(), you had to make sure that your variables appeared as arguments in the same order that you
+# wanted them to appear in the string, which added unnecessary complications when writing code.
+# By including keywords in the string, and in the arguments, you can remove that ambiguity.
+
+#  Let’s look at an example.
+def favorite_song_statement(song, artist):
+    return "My favorite song is {song} by {artist}.".format(song=song, artist=artist)
+
+
+# if the arguments of .format() are in a different order, the code will still work since the keywords are present:
+def favorite_song_statement(song, artist):
+    # this will have the same output as the above example
+    return "My favorite song is {song} by {artist}.".format(artist=artist, song=song)
+
+
+# The function poem_description is supposed to use .format() to print out some quick information about a poem
+def poem_description(publishing_date, author, title, original_work):
+    poem_desc = "The poem {title} by {author} was originally published in {original_work} in {publishing_date}.".format(
+        title=title, author=author, original_work=original_work, publishing_date=publishing_date)
+    return poem_desc
+
+
+my_beard_description = poem_description("1974", "Shel Silverstein", "My Beard", "Where the Sidewalk Ends")
+
+print(my_beard_description)
+
+# 13，Review
+# Over this lesson you’ve learned:
+#
+# .upper(), .title(), and .lower() adjust the casing of your string.
+# .split() takes a string and creates a list of substrings.
+# .join() takes a list of strings and creates a string.
+# .strip() cleans off whitespace, or other noise from the beginning and end of a string.
+# .replace() replaces all instances of a character/string in a string with another character/string.
+# .find() searches a string for a character/string and returns the index value that character/string is found at.
+# .format() allows you to interpolate a string with variables.
+# Well I’ve been stringing you along for long enough, let’s get some more practice in!
+
+# 1.Preserve the Verse has one final task for you. They have delivered you a string that contains a list of poems,
+# titled highlighted_poems, they want to highlight on the site, but they need your help to parse the string into
+# something that can display the name, title, and publication date of the highlighted poems on the site.
+#
+# First, start by printing highlighted_poems to the terminal and see how it displays.
+highlighted_poems = "Afterimages:Audre Lorde:1997,  The Shadow:William Carlos Williams:1915, Ecstasy:Gabriela " \
+                    "Mistral:1925,   Georgia Dusk:Jean Toomer:1923,   Parting Before Daybreak:An Qi:2014, The Untold " \
+                    "Want:Walt Whitman:1871, Mr. Grumpledump's Song:Shel Silverstein:2004, Angel Sound Mexico " \
+                    "City:Carmen Boullosa:2013, In Love:Kamala Suraiyya:1965, Dream Variations:Langston Hughes:1994, " \
+                    "Dreamwood:Adrienne Rich:1987 "
+
+print(highlighted_poems)
+
+# 2.The information for each poem is separated by commas, and within this information is the title of the poem, the author, and the date of publication.
+#
+# Start by splitting highlighted_poems at the commas and saving it to highlighted_poems_list.
+# Print highlighted_poems_list, how does the structure of the data look now?
+highlighted_poems_list = highlighted_poems.split(',')
+print(highlighted_poems_list)
+
+# 3.Notice that there is inconsistent whitespace in highlighted_poems_list. Let’s clean that up.
+# Print highlighted_poems_stripped.
+highlighted_poems_stripped = []
+for poem in highlighted_poems_list:
+    highlighted_poems_stripped.append(poem.strip())
+
+print(highlighted_poems_stripped)
+
+# 4.Next we want to break up all the information for each poem into it’s own list
+# Iterate through highlighted_poems_stripped and split each string around the : characters and append the new lists into
+# highlighted_poems_details.
+highlighted_poems_details = []
+
+for poem in highlighted_poems_stripped:
+  highlighted_poems_details.append(poem.split(':'))
+print(highlighted_poems_details)
+
+# 5.Great! Now we want to separate out all of the titles, the poets, and the publication dates into their own lists.
+# Iterate through highlighted_poems_details and for each list in the list append the appropriate elements into the lists
+# titles, poets, and dates.Finally, write a for loop that uses .format() to print out the following string for each poem:
+# The poem TITLE was published by POET in DATE.
+titles = []
+poets = []
+dates = []
+
+for poem in highlighted_poems_details:
+  titles.append(poem[0])
+  poets.append(poem[1])
+  dates.append(poem[2])
+  print("The poem {} was published by {} in {}.".format(poem[0],poem[1],poem[2]))
