@@ -79,7 +79,8 @@ print(author_last_names)
 # \n Newline
 # \t Horizontal Tab
 
-# Newline or \n will allow us to split a multi-line string by line breaks and \t will allow us to split a string by tabs.
+# Newline or \n will allow us to split a multi-line string by line breaks and \t will allow us to split a string by
+# tabs.
 
 # Create a list called spring_storm_lines that contains a string for each line of Spring Storm
 spring_storm_text = \
@@ -186,18 +187,18 @@ print(love_maybe_full)
 # first argument in a string with the second argument. The syntax is as follows
 # string_name.replace(substring_being_replaced, new_substring)
 
-
 # The poetry organization has sent over the bio for Jean Toomer as it currently exists on their site. Notice that
 # there was a mistake with his last name and all instances of Toomer are lacking one o.
 #
 # Use .replace() to change all instances of Tomer in the bio to Toomer. Save the updated bio to the string
 # toomer_bio_fixed.
 toomer_bio = \
-"""
-Nathan Pinchback Tomer, who adopted the name Jean Tomer early in his literary career, was born in Washington, D.C. in 1894. Jean is the son of Nathan Tomer was a mixed-race freedman, born into slavery in 1839 in Chatham County, North Carolina. Jean Tomer is most well known for his first book Cane, which vividly portrays the life of African-Americans in southern farmlands.
-"""
+    """Nathan Pinchback Tomer, who adopted the name Jean Tomer early in his literary career, was born in Washington, 
+    D.C. in 1894. Jean is the son of Nathan Tomer was a mixed-race freedman, born into slavery in 1839 in Chatham 
+    County, North Carolina. Jean Tomer is most well known for his first book Cane, which vividly portrays the life of 
+    African-Americans in southern farmlands. """
 
-toomer_bio_fixed =  toomer_bio.replace("Tomer", "Toomer")
+toomer_bio_fixed = toomer_bio.replace("Tomer", "Toomer")
 
 # 10.find()
 # Another interesting string method is .find(). .find() takes a string as an argument and searching the string it was
@@ -212,6 +213,7 @@ god_wills_it_line_one = "The very earth will disown you"
 disown_placement = god_wills_it_line_one.find("disown")
 
 print(disown_placement)
+
 
 # 11.format()
 # Python also provides a handy string method for including variables in strings. This method is .format().
