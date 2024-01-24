@@ -77,6 +77,7 @@ def odd_indices(my_list):
   for index in range(1, len(my_list), 2):
     new_list.append(my_list[index])
   return new_list
+print(odd_indices([4, 3, 7, 10, 11, -2]))
 # Coding question 5.Exponents
 # Create a function named exponents() that takes two lists as parameters named bases and powers. Return a new list containing every number in bases raised to every number in powers.
 #
@@ -103,3 +104,4 @@ def exponents(bases, powers):
     for power in powers:
       new_list.append(base ** power)
   return new_list
+print(exponents([2, 3, 4], [1, 2, 3]))
