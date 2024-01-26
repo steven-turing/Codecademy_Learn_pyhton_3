@@ -1,3 +1,4 @@
+# Lesson 1 Introduction to Strings
 # 1.Introduction to Strings
 # In Python, the way we store something like a word, a sentence, or even a whole paragraph
 # is as a string. A string is a sequence of characters contained within a pair of 'single quotes' or "double quotes".
