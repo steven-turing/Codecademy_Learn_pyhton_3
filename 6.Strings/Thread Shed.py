@@ -11,7 +11,7 @@
 # clean up each transaction and store all the information in easier-to-access lists.
 
 daily_sales = \
-"""Edith Mcbride   ;,;$1.21   ;,;   white ;,; 
+    """Edith Mcbride   ;,;$1.21   ;,;   white ;,; 
 09/15/17   ,Herbert Tran   ;,;   $7.29;,; 
 white&blue;,;   09/15/17 ,Paul Clarke ;,;$12.52 
 ;,;   white&blue ;,; 09/15/17 ,Lucille Caldwell   
@@ -117,29 +117,29 @@ green&white;,;09/15/17,   Gail Phelps   ;,;$30.52
 ;,; green&white&blue   ;,; 09/15/17 , Myrtle Morris 
 ;,;   $22.66   ;,; green&white&blue;,;09/15/17"""
 
-#------------------------------------------------
+# ------------------------------------------------
 # Start coding below!
 # Replace all the instances of ;,; in daily_sales with some other character and save the result to daily_sales_replaced.
-daily_sales_replaced = daily_sales.replace(';,;','-')
-#print(daily_sales_replaced)
+daily_sales_replaced = daily_sales.replace(';,;', '-')
+# print(daily_sales_replaced)
 
 # Split daily_sales_replaced around commas and save it to a new list daily_transactions.
 daily_transactions = daily_sales_replaced.split(',')
-#print(daily_transactions)
+# print(daily_transactions)
 
 # Split daily_transactions
 daily_transactions_split = []
 for daily_transaction in daily_transactions:
-  daily_transactions_split.append(daily_transaction.split('-'))
-#print(daily_transactions_split)
+    daily_transactions_split.append(daily_transaction.split('-'))
+# print(daily_transactions_split)
 
 # Now, Iterate through daily_transactions_split and for each transaction iterate through the different data points and strip off any whitespace.
 transactions_clean = []
 for transaction in daily_transactions_split:
-  transactions_clean2 = []
-  for daily in transaction:
-    transactions_clean2.append(daily.strip())
-  transactions_clean.append(transactions_clean2)
+    transactions_clean2 = []
+    for daily in transaction:
+        transactions_clean2.append(daily.strip())
+    transactions_clean.append(transactions_clean2)
 
 print(transactions_clean)
 
@@ -148,48 +148,49 @@ sales = []
 thread_sold = []
 
 for transaction in transactions_clean:
-  customers.append(transaction[0])
-  if len(transaction) >= 2:
-    sales.append(transaction[1])
-  else:
-     sales.append("")
-  if len(transaction) >= 3:
-    thread_sold.append(transaction[2])
-  else:
-    thread_sold.append("")
+    customers.append(transaction[0])
+    if len(transaction) >= 2:
+        sales.append(transaction[1])
+    else:
+        sales.append("")
+    if len(transaction) >= 3:
+        thread_sold.append(transaction[2])
+    else:
+        thread_sold.append("")
 
-#print(customers)
-#print(sales)
-#print(thread_sold)
+# print(customers)
+# print(sales)
+# print(thread_sold)
 
 # Determine the total value of the days sales.
 total_sales = 0
 for sale in sales:
-  total_sales += float(sale.strip('$'))
+    total_sales += float(sale.strip('$'))
 print(total_sales)
 
 # How much thread of any specific color was sold?
 thread_sold_split = []
 multiple = []
 for thread in thread_sold:
-  if '&' in thread:
-    multiple.append(thread.split('&'))
-  else:
-    thread_sold_split.append(thread)
+    if '&' in thread:
+        multiple.append(thread.split('&'))
+    else:
+        thread_sold_split.append(thread)
 
 for split in multiple:
-  for split1 in split:
-    thread_sold_split.append(split1)
+    for split1 in split:
+        thread_sold_split.append(split1)
 
 print(thread_sold_split)
 
 
 def color_count(color):
-  count = 0
-  for split in thread_sold_split:
-    if  split == color:
-      count += 1
-  return count
+    count = 0
+    for split in thread_sold_split:
+        if split == color:
+            count += 1
+    return count
+
 
 print(color_count('white'))
 
@@ -199,5 +200,4 @@ colors = ['red', 'yellow', 'green', 'white', 'black', 'blue', 'purple']
 # Now, using the string method .format() and the function color_count(), iterate through the list colors and print a
 # sentence that says how many threads of each color were sold today.
 for color in colors:
-  print("Thread Shed sold {} threads of {} thread today".format(color_count(color),color))
-
+    print("Thread Shed sold {} threads of {} thread today".format(color_count(color), color))
