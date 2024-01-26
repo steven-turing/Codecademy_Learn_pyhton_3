@@ -1,3 +1,4 @@
+# Lesson 1 Introduction to Strings
 # 1.Introduction
 # Python comes with built-in string methods that give you the power to perform complicated tasks on
 # strings very quickly and efficiently. These string methods allow you to change the case of a string, split a string
