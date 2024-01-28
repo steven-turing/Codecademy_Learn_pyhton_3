@@ -20,3 +20,32 @@ current_time = datetime.now()
 
 # Print out current_time.
 print(current_time)
+
+# 2.Modules Python Random
+# Another one of the most commonly used is random which allows you to generate numbers or select items at random.
+# With random, we’ll be using more than one piece of the module’s functionality, so the import syntax will look like:
+# import random
+
+# We’ll work with two common random functions:
+#
+# random.choice() which takes a list as an argument and returns a number from the list
+# random.randint() which takes two numbers as arguments and generates a random number between the two numbers you passed
+# in
+
+# import the random library
+import random
+
+# Create a variable random_list and set it equal to an empty list
+random_list = []
+
+# Turn the empty list into a list comprehension that uses random.randint() to generate a random integer between 1 and
+# 100 (inclusive) for each number in range(101).
+# Create randomer_number below:
+random_list = [random.randint(1, 100) for i in range(101)]
+
+# Create a new variable randomer_number and set it equal to random.choice() with random_list as an argument.
+# Print randomer_number below:
+randomer_number = random.choice(random_list)
+
+# Print randomer_number out to see what number was picked!
+print(randomer_number)
