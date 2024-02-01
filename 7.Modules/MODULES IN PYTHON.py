@@ -40,7 +40,6 @@ random_list = []
 
 # Turn the empty list into a list comprehension that uses random.randint() to generate a random integer between 1 and
 # 100 (inclusive) for each number in range(101).
-# Create randomer_number below:
 random_list = [random.randint(1, 100) for i in range(101)]
 
 # Create a new variable randomer_number and set it equal to random.choice() with random_list as an argument.
@@ -49,3 +48,5 @@ randomer_number = random.choice(random_list)
 
 # Print randomer_number out to see what number was picked!
 print(randomer_number)
+
+# 3.Modules Python Namespaces
