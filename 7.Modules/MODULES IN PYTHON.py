@@ -50,3 +50,94 @@ randomer_number = random.choice(random_list)
 print(randomer_number)
 
 # 3.Modules Python Namespaces
+# Notice that when we want to invoke the randint() function we call random.randint().
+# This is default behavior where Python offers a namespace for the module. A namespace isolates the functions,
+# classes, and variables defined in the module from the code in the file doing the importing. Your local namespace,
+# meanwhile, is where your code is run.
+
+# import pyplot from the module matplotlib with the alias plt.(pycharm:File->Settings->project->python interpreter
+# -> + -> matplotlib->Install Package)
+# Import random below the other import statements. It’s best to keep all imports at the top of your file.
+from matplotlib import pyplot as plt
+import random
+
+# Create a variable numbers_a and set it equal to the range of numbers 1 through 12 (inclusive).
+numbers_a = range(1, 13)
+
+# Create a variable numbers_b and set it equal to a random sample of twelve numbers within range(1000).
+# Feel free to print numbers_b to see your random sample of numbers.
+numbers_b = random.sample(range(1000), 12)
+print(numbers_b)
+
+# Now let’s plot these number sets against each other using plt. Call plt.plot() with your two variables as its
+# arguments.
+plt.plot(numbers_a, numbers_b)
+
+# Now call plt.show() and run your code! You should see a graph of random numbers displayed. You’ve used two Python
+# modules to accomplish this (random and matplotlib).
+# plt.show()
+
+# 4.Modules Python Decimals
+# Let’s say you are writing software that handles monetary transactions. If you used Python’s built-in floating-point
+# arithmetic to calculate a sum, it would result in a weirdly formatted number.
+cost_of_gum = 0.10
+cost_of_gumdrop = 0.35
+
+cost_of_transaction = cost_of_gum + cost_of_gumdrop
+print(cost_of_transaction)
+# =>0.44999999999999996
+
+# Being familiar with rounding errors in floating-point arithmetic you want to use a data type that performs decimal
+# arithmetic more accurately. You could do the following:
+from decimal import Decimal
+
+cost_of_gum = Decimal('0.10')
+cost_of_gumdrop = Decimal('0.35')
+
+cost_of_transaction = cost_of_gum + cost_of_gumdrop
+print(cost_of_transaction)
+# => 0.45
+
+# Use Decimal to make two_decimal_points only have two decimals points and four_decimal_points to only have four
+# decimal points.
+# Import Decimal below:
+from decimal import Decimal
+
+# Fix the floating point math below:
+two_decimal_points = Decimal('0.2') + Decimal('0.69')
+print(two_decimal_points)
+
+four_decimal_points = Decimal('0.53') * Decimal('0.65')
+print(four_decimal_points)
+
+
+# 5.Modules Python Files and Scope
+# You may remember the concept of scope from when you were learning about functions in Python. If a variable is defined
+# inside of a function, it will not be accessible outside of the function.
+
+# Scope also applies to classes and to the files you are working within.
+# Tab over to library.py and define a function always_three() with no parameters that returns 3.
+# Add your always_three() function below:
+# create library.py
+def always_three():
+    return 3
+
+# Call your always_three() function in script.py. Check out that error message you get in the output terminal and the
+# consequences of file scope.
+# Resolve the error with an import statement at the top of script.py that imports your function from library. Run your
+# code and watch import do its magic!
+# Import library below:
+# create script.py
+from library import always_three
+
+# Call your function below:
+always_three()
+
+# 6.Modules Python Review
+# In this lesson, we covered some of the Python Standard Library, but you can explore all the modules that come packaged
+# with every installation of Python at the Python Standard Library documentation.
+#
+# This is just the beginning. Using a package manager (like conda or pip3), you can install any modules available on the
+# Python Package Index.
+#
+# The sky’s the limit!
