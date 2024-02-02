@@ -328,3 +328,4 @@ for poem in highlighted_poems_details:
   poets.append(poem[1])
   dates.append(poem[2])
   print("The poem {} was published by {} in {}.".format(poem[0],poem[1],poem[2]))
+
