@@ -75,7 +75,7 @@ plt.plot(numbers_a, numbers_b)
 
 # Now call plt.show() and run your code! You should see a graph of random numbers displayed. You’ve used two Python
 # modules to accomplish this (random and matplotlib).
-# plt.show()
+plt.show()
 
 # 4.Modules Python Decimals
 # Let’s say you are writing software that handles monetary transactions. If you used Python’s built-in floating-point
@@ -128,7 +128,7 @@ def always_three():
 # code and watch import do its magic!
 # Import library below:
 # create script.py
-from library import always_three
+#from library import always_three
 
 # Call your function below:
 always_three()
