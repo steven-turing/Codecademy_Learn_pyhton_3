@@ -20,3 +20,9 @@ with open('just_the_first.txt') as first_line_doc:
 
 print(first_line)
 print(second_line)
+
+# Here we pass the argument 'w' to open() in order to indicate to open the file in write-mode. The default argument is
+# 'r' and passing 'r' to open() opens the file in read-mode as we’ve been doing.
+
+with open('bad_bands.txt','w') as bad_bands_doc:
+  bad_bands_doc.write('fenghuangchuanqi')
