@@ -50,4 +50,11 @@ with open('cool_dogs.txt', 'a') as cool_dogs_file:
 # we leave the indented block.
 
 # 7.What Is a CSV File?
+# CSV stands for Comma-Separated Values and CSV files are usually the way that data from spreadsheet software
+# (like Microsoft Excel or Google Sheets) is exported into a portable format.
+# Open logger.csv using our standard with syntax, saving the file object in the temporary variable log_csv_file.
 
+with open('logger.csv') as log_csv_file:
+    print(log_csv_file.read())
+
+# 8.Reading a CSV File
