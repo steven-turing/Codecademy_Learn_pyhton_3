@@ -58,3 +58,10 @@ with open('logger.csv') as log_csv_file:
     print(log_csv_file.read())
 
 # 8.Reading a CSV File
+# In Python we can convert that data into a dictionary using the csv library’s DictReader object.
+
+import csv
+with open('cool_csv.csv') as cool_csv_file:
+    cool_csv_dict = csv.DictReader(cool_csv_file)
+    for row in cool_csv_dict:
+      print(row)
