@@ -106,9 +106,25 @@ with open('logger.csv', 'w') as logger_csv:
 
 # 11.Reading a JSON File
 # First we import the json package. We opened the file using our trusty open() command.
-
+# We continue by parsing message_json using json.load(), creating a Python dictionary out of the file.
 import json
 
 with open('message.json') as message_json:
     message = json.load(message_json)
     print(message['text'])
+
+# 12.Writing a JSON File
+# We import the json module, open up a write-mode file under the variable json_file, and then use the json.dump() method
+# to write to the file. json.dump() takes two arguments: first the data object, then the file object you want to save.
+
+data_payload = [
+  {'interesting message': 'What is JSON? A web application\'s little pile of secrets.',
+   'follow up': 'But enough talk!'}
+]
+
+import json
+
+with open('data.json', 'w') as data_json:
+    json.dump(data_payload, data_json)
+
+#
