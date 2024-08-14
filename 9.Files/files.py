@@ -66,3 +66,16 @@ with open('cool_csv.csv') as cool_csv_file:
     cool_csv_dict = csv.DictReader(cool_csv_file)
     for row in cool_csv_dict:
         print(row)
+
+# 9.Reading Different Types of CSV Files
+# We call all files with a list of different values a CSV file and then use different delimiters
+# (like a comma or tab) to indicate where the different values start and stop.
+
+import csv
+
+with open('books.csv') as books_csv:
+    books_reader = csv.DictReader(books_csv, delimiter='@')
+    isbn_list = []
+    for row in books_reader:
+        isbn_list.append(row['ISBN'])
+    print(isbn_list)
