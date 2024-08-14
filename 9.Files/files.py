@@ -103,3 +103,12 @@ with open('logger.csv', 'w') as logger_csv:
     log_writer.writeheader()
     for line in access_log:
         log_writer.writerow(line)
+
+# 11.Reading a JSON File
+# First we import the json package. We opened the file using our trusty open() command.
+
+import json
+
+with open('message.json') as message_json:
+    message = json.load(message_json)
+    print(message['text'])
