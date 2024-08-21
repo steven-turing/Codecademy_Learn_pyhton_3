@@ -109,4 +109,39 @@ isabelles_ices = Store()
 alternative_rocks.store_name = "Alternative Rocks"
 isabelles_ices.store_name = "Isabelle's Ices"
 
-# 10.
+# 10.Attribute Functions
+# Instance variables and class variables are both accessed similarly in Python. This is no
+# mistake, they are both considered attributes of an object. If we attempt to access an attribute that is neither a
+# class variable nor an instance variable of the object Python will throw an AttributeError.
+# What if we aren’t sure if an object has an attribute or not? hasattr() will return True if an object has a given
+# attribute and False otherwise. If we want to get the actual value of the attribute, getattr() is a Python function
+# that will return the value of a given object and attribute.
+can_we_count_it = [{'s': False}, "sassafrass", 18, ["a", "c", "s", "d", "s"]]
+
+for i in can_we_count_it:
+    if hasattr(i, "count"):
+        print(str(type(i)) + " has the count attribute!")
+    else:
+        print(str(type(i)) + " does not have the count attribute :(")
+
+
+# 11.Self
+class Circle:
+    pi = 3.14
+
+    def __init__(self, diameter):
+        print("Creating circle with diameter {d}".format(d=diameter))
+        # Add assignment for self.radius here:
+        self.radius = diameter / 2
+
+    def circumference(self):
+        return 2 * self.pi * self.radius
+
+
+medium_pizza = Circle(12)
+teaching_table = Circle(36)
+round_room = Circle(11460)
+
+print(medium_pizza.circumference())
+print(teaching_table.circumference())
+print(round_room.circumference())
