@@ -76,5 +76,17 @@ round_room_area = circle.area(11460 / 2)
 
 print(pizza_area, teaching_table_area, round_room_area)
 
-#8.Constructors
-#
+# 8.Constructors
+# Methods that are used to prepare an object being instantiated are called constructors. The word
+# “constructor” is used to describe similar features in other object-oriented programming languages, but programmers
+# who refer to a constructor in Python are usually talking about the __init__() method.
+class Circle:
+    pi = 3.14
+
+    # Add constructor here:
+    def __init__(self, diameter):
+        print("New circle with diameter: ", diameter)
+
+
+teaching_table = Circle(36)
+
