@@ -49,4 +49,31 @@ print(facade_1_type)
 class Grade:
     minimum_passing = 65
 
-# 6.
+
+# 6.Methods
+# Methods are functions that are defined as part of a class. The first argument in a method is always the object that is
+# calling the method. Convention recommends that we name this first argument self. Methods always have at least this one
+# argument.
+class Rules:
+    def washing_brushes(self):
+        return ("Point bristles towards the basin while washing your brushes.")
+
+
+# 7.Methods with Arguments
+# Methods can also take more arguments than just self
+class Circle:
+    pi = 3.14
+
+    def area(self, radius):
+        return (self.pi * radius ** 2)
+
+
+circle = Circle()
+
+pizza_area = circle.area(12 / 2)
+teaching_table_area = circle.area(36 / 2)
+round_room_area = circle.area(11460 / 2)
+
+print(pizza_area, teaching_table_area, round_room_area)
+
+#8.
