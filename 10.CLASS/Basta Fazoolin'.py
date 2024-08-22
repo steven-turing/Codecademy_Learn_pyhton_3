@@ -3,7 +3,7 @@
 #
 # Create a Menu class .Give Menu a constructor with the five parameters self, name, items, start_time, and end_time.
 
-class Menu():
+class Menu:
     def __init__(self, name, items, start_time, end_time):
         self.name = name
         self.items = items
