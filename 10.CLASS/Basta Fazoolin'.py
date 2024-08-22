@@ -22,8 +22,14 @@ class Menu:
                                                                                             end_time=end_time_formatted,
                                                                                             end_period=end_period)
 
+    def calculate_bill(self, purchased_items):
+        total_price = 0
+        for item in purchased_items:
+            price = self.items[item]
+            total_price += price
+        print(total_price)
 
-# Let’s create our  menu
+    # Let’s create our  menu
 brunch = Menu("brunch",
               {'pancakes': 7.50, 'waffles': 9.00, 'burger': 11.00, 'home fries': 4.50, 'coffee': 1.50, 'espresso': 3.00,
                'tea': 1.00, 'mimosa': 10.50, 'orange juice': 3.50}, 11, 16)
@@ -39,3 +45,7 @@ dinner = Menu("dinner",
 kids = Menu("kids", {'chicken nuggets': 6.50, 'fusilli with wild mushrooms': 12.00, 'apple juice': 3.00}, 11, 21)
 
 print(brunch)
+brunch.calculate_bill(['pancakes', 'home fries', 'coffee'])
+early_bird.calculate_bill(['salumeria plate', 'mushroom ravioli (vegan)'])
+
+
