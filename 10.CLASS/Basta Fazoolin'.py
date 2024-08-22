@@ -38,3 +38,4 @@ dinner = Menu("dinner",
 
 kids = Menu("kids", {'chicken nuggets': 6.50, 'fusilli with wild mushrooms': 12.00, 'apple juice': 3.00}, 11, 21)
 
+print(brunch)
