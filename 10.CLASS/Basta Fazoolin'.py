@@ -10,6 +10,18 @@ class Menu():
         self.start_time = start_time
         self.end_time = end_time
 
+    def __repr__(self):
+        end_time_formatted = self.end_time
+        if self.end_time > 12:
+            end_time_formatted = self.end_time - 12
+            end_period = "pm"
+        else:
+            end_period = "am"
+        return "{name} menu available from {start_time}am to {end_time}{end_period}".format(name=self.name,
+                                                                                            start_time=self.start_time,
+                                                                                            end_time=end_time_formatted,
+                                                                                            end_period=end_period)
+
 
 # Let’s create our  menu
 brunch = Menu("brunch",
@@ -25,3 +37,4 @@ dinner = Menu("dinner",
                'duck ragu': 19.50, 'mushroom ravioli (vegan)': 13.50, 'coffee': 2.00, 'espresso': 3.00, }, 15, 22)
 
 kids = Menu("kids", {'chicken nuggets': 6.50, 'fusilli with wild mushrooms': 12.00, 'apple juice': 3.00}, 11, 21)
+
