@@ -1,6 +1,6 @@
 # At Basta Fazoolin’ with my Heart our motto is simple: when you’re here with family, that’s great!
 # We have four different menus: brunch, early-bird, dinner, and kids.
-#
+# Making the Menus
 # Create a Menu class .Give Menu a constructor with the five parameters self, name, items, start_time, and end_time.
 
 class Menu:
@@ -48,4 +48,9 @@ print(brunch)
 brunch.calculate_bill(['pancakes', 'home fries', 'coffee'])
 early_bird.calculate_bill(['salumeria plate', 'mushroom ravioli (vegan)'])
 
+# Creating the Franchises
+class Franchise:
+    def __init__(self, address, menus):
+        self.address = address
+        self.menus = menus
 
