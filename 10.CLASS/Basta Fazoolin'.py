@@ -58,9 +58,16 @@ class Franchise:
         self.menus = menus
 
     def __repr__(self):
-        return "Franchise located at {address}".format(address = self.address)
+        return "Franchise located at {address}".format(address=self.address)
+
+    def available_menus(self, time):
+        Menu = []
+        for menu in self.menus:
+            if menu.start_time < time < menu.end_time:
+                Menu.append(menu)
+        return Menu
+
 
 # Let’s create our first two franchises!
 flagship_store = Franchise("1232 West End Road", ["brunch", "early_bird", "dinner", "kids"])
 new_installment = Franchise("12 East Mulberry Street", ["brunch", "early_bird", "dinner", "kids"])
-
