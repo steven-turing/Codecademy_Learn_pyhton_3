@@ -30,6 +30,8 @@ class Menu:
         print(total_price)
 
     # Let’s create our  menu
+
+
 brunch = Menu("brunch",
               {'pancakes': 7.50, 'waffles': 9.00, 'burger': 11.00, 'home fries': 4.50, 'coffee': 1.50, 'espresso': 3.00,
                'tea': 1.00, 'mimosa': 10.50, 'orange juice': 3.50}, 11, 16)
@@ -48,9 +50,17 @@ print(brunch)
 brunch.calculate_bill(['pancakes', 'home fries', 'coffee'])
 early_bird.calculate_bill(['salumeria plate', 'mushroom ravioli (vegan)'])
 
+
 # Creating the Franchises
 class Franchise:
     def __init__(self, address, menus):
         self.address = address
         self.menus = menus
+
+    def __repr__(self):
+        return "Franchise located at {address}".format(address = self.address)
+
+# Let’s create our first two franchises!
+flagship_store = Franchise("1232 West End Road", ["brunch", "early_bird", "dinner", "kids"])
+new_installment = Franchise("12 East Mulberry Street", ["brunch", "early_bird", "dinner", "kids"])
 
