@@ -69,5 +69,7 @@ class Franchise:
 
 
 # Let’s create our first two franchises!
-flagship_store = Franchise("1232 West End Road",[brunch, early_bird, dinner, kids])
-new_installment = Franchise("12 East Mulberry Street",[brunch, early_bird, dinner, kids])
+flagship_store = Franchise("1232 West End Road", [brunch, early_bird, dinner, kids])
+new_installment = Franchise("12 East Mulberry Street", [brunch, early_bird, dinner, kids])
+
+print(flagship_store.available_menus(12))
