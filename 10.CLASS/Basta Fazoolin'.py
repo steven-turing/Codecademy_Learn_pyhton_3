@@ -72,4 +72,10 @@ class Franchise:
 flagship_store = Franchise("1232 West End Road", [brunch, early_bird, dinner, kids])
 new_installment = Franchise("12 East Mulberry Street", [brunch, early_bird, dinner, kids])
 
-print(flagship_store.available_menus(12))
+available_menus_at_noon = flagship_store.available_menus(12)
+print(available_menus_at_noon)
+
+available_menus_at_noon1 = flagship_store.available_menus(5pm)
+print(available_menus_at_noon1)
+
+# Creating Businesses!
