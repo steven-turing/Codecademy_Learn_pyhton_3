@@ -79,3 +79,5 @@ available_menus_at_noon1 = flagship_store.available_menus(5pm)
 print(available_menus_at_noon1)
 
 # Creating Businesses!
+class Business:
+  pass 
