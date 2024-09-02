@@ -80,4 +80,10 @@ print(available_menus_at_noon1)
 
 # Creating Businesses!
 class Business:
-  pass 
+    def __init__(self,name,franchises):
+        self.name - name
+        self.franchises = franchises
+
+business_name = "Basta Fazoolin' with my Heart"
+franchises_list = [flagship_store,new_installment]
+business_instance = Business(business_name,franchises_list)
