@@ -88,11 +88,14 @@ business_name = "Basta Fazoolin' with my Heart"
 franchises_list = [flagship_store, new_installment]
 business_instance = Business(business_name, franchises_list)
 
-arepas_menu = {
+arepas_item = {
   'arepa pabellon': 7.00, 'pernil arepa': 8.50, 'guayanes arepa': 8.00, 'jamon arepa': 7.50
 }
+arepas_menu = Menu("Take a' Arepa", arepas_item, 1000, 2000)
 
 arepas_place = Franchise("189 Fitzgerald Avenue", [arepas_menu])
 
 business_name = "Take a' Arepa"
-business_instance = Business(business_name, [arepas_place])
+arepa = Business("Take a' Arepa", [arepas_place])
+
+print(arepa.franchises[0].menus[0])
