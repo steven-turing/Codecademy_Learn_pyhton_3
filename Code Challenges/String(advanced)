@@ -1,3 +1,4 @@
+# 1. Check Name
 # Write a function called check_for_name that takes two strings as parameters named sentence and name. The function should return True if name appears in sentence in all lowercase letters, all uppercase letters, or with any mix of uppercase and lowercase letters. The function should return False otherwise.
 # Write your check_for_name function here:
 def check_for_name(sentence, name):
@@ -21,3 +22,20 @@ print(check_for_name("My name is Samantha", "Jamie"))
 # As you can see, this function can be created using one line. The in keyword will return True if the first provided string is within the second. So in this case, we’re checking if name is in sentence. In order to ignore differences in capitalization, we can use the .lower() function which converts all characters to lowercase characters.
 def check_for_name(sentence, name):
   return name.lower() in sentence.lower()
+
+# 2. Every Other Letter
+# Create a function named every_other_letter that takes a string named word as a parameter. The function should return a string containing every other letter in word.
+# Write your every_other_letter function here:
+def every_other_letter(word):
+  every_other = ""
+  for i in range(0, len(word), 2):
+     every_other += word[i]
+  return every_other
+
+# Uncomment these function calls to test your function:
+print(every_other_letter("Codecademy"))
+# should print Cdcdm
+print(every_other_letter("Hello world!"))
+# should print Hlowrd
+print(every_other_letter(""))
+# should print 
