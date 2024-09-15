@@ -65,3 +65,5 @@ def reverse_string(word):
   for i in range(len(word)-1, -1, -1):
     reverse += word[i]
   return reverse
+# range(3, -1, -1) 是 Python 中生成一个范围序列的函数调用。它的意思是从 3 开始，逐步减小，每次减少 1，直到到达 -1（不包括 -1）。具体生成的序列是：[3, 2, 1, 0]
+# 第一个参数 3 是起始值。第二个参数 -1 是结束值，但 range 的结束值是不包含的，所以最后的值是 0。第三个参数 -1 是步长，每次从起始值减去 1。
