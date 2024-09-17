@@ -113,3 +113,6 @@ def add_exclamation(word):
   while(len(word) < 20):
     word += "!"
   return word
+
+#you can use a for loop, but since you don't know how many exclamation marks are needed upfront, a while loop is more suitable in this case.
+#However, you can calculate how many exclamation marks are required and then use a for loop to add them.
