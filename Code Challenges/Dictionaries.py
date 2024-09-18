@@ -89,4 +89,15 @@ print(max_key({1:100, 2:1, 3:4, 4:10}))
 print(max_key({"a":100, "b":10, "c":1000}))
 # should print "c"
 
+#Here is this solution:
+
+def max_key(my_dictionary):
+  largest_key = float("-inf")
+  largest_value = float("-inf")
+  for key, value in my_dictionary.items():
+    if value > largest_value:
+      largest_value = value
+      largest_key = key
+  return largest_key
+
 # -inf 是负无穷大的意思，全称是 negative infinity，表示数学中的负无穷。在 Python 中，float("-inf") 会生成一个特殊的浮点数，表示负无穷大。
