@@ -70,3 +70,23 @@ def values_that_are_keys(my_dictionary):
     if value in my_dictionary:
       value_keys.append(value)
   return value_keys
+
+# 5. Largest Value
+# Write a function named max_key that takes a dictionary named my_dictionary as a parameter. 
+# The function should return the key associated with the largest value in the dictionary.
+# Write your max_key function here:
+def max_key(my_dictionary ):
+  starting_key = 0
+  starting_value = 0
+  for key ,value in my_dictionary.items():
+    if value > starting_value:
+      starting_value = value
+      starting_key = key
+  return starting_key
+# Uncomment these function calls to test your  function:
+print(max_key({1:100, 2:1, 3:4, 4:10}))
+# should print 1
+print(max_key({"a":100, "b":10, "c":1000}))
+# should print "c"
+
+# -inf 是负无穷大的意思，全称是 negative infinity，表示数学中的负无穷。在 Python 中，float("-inf") 会生成一个特殊的浮点数，表示负无穷大。
