@@ -41,3 +41,19 @@ def frequency_dictionary(words):
       freqs[word] = 0
     freqs[word] += 1
   return freqs
+
+# 3. Unique Values
+# Create a function named unique_values that takes a dictionary named my_dictionary as a parameter. 
+# The function should return the number of unique values in the dictionary.
+# Write your unique_values function here:
+def unique_values(my_dictionary):
+  Unique = []
+  for word in my_dictionary.values():
+    if word not in Unique:
+      Unique.append(word)
+  return len(Unique)
+# Uncomment these function calls to test your  function:
+print(unique_values({0:3, 1:1, 4:1, 5:3}))
+# should print 2
+print(unique_values({0:3, 1:3, 4:3, 5:3}))
+# should print 1
