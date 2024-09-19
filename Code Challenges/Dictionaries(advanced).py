@@ -57,3 +57,35 @@ print(unique_values({0:3, 1:1, 4:1, 5:3}))
 # should print 2
 print(unique_values({0:3, 1:3, 4:3, 5:3}))
 # should print 1
+
+# 4. Count First Letter
+# Create a function named count_first_letter that takes a dictionary named names as a parameter. names should be a dictionary where the key is 
+# a last name and the value is a list of first names. For example, the dictionary might look like this:
+# Write your count_first_letter function here:
+def count_first_letter(names):
+  letters = {}
+  for name in names:
+      first_letter = name[0]
+      if first_letter in letters:
+         letters[first_letter] += len(names[name])
+      else:
+        letters[first_letter] = len(names[name])
+  return letters
+# Uncomment these function calls to test your  function:
+print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Lannister": ["Jaime", "Cersei", "Tywin"]}))
+# should print {"S": 4, "L": 3}
+print(count_first_letter({"Stark": ["Ned", "Robb", "Sansa"], "Snow" : ["Jon"], "Sannister": ["Jaime", "Cersei", "Tywin"]}))
+# should print {"S": 7}
+# First letter extraction: The code uses first_letter = name[0] to extract the first letter of each key in the dictionary names.
+# Dictionary initialization: Before adding to a key's value, we check if the key exists. If it exists, we increment the value. 
+# If it doesn't, we initialize the key with the count from len(names[name]).
+
+#Here is what we did:
+def count_first_letter(names):
+  letters = {}
+  for key in names:
+    first_letter = key[0]
+    if first_letter not in letters:
+      letters[first_letter] = 0
+    letters[first_letter] += len(names[key])
+  return letters
